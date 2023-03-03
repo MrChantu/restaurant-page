@@ -1,0 +1,139 @@
+:root {
+    --border-color: rgb(255, 174, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+}
+
+#content {
+    background: url(img/background.jpg);
+    background-size: cover;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    font-size: calc(3vw + 3vh);
+    text-shadow: 0px 0px 5px #000000;
+}
+
+main button {
+    padding: 10px 15px 10px 15px;
+    border-radius: 0;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    background-color: var(--border-color);
+    cursor: pointer;
+    font-size: calc(0.75vw + 0.75vh);;
+}
+
+main button:hover {
+    color: white;
+}
+
+#menu-items {
+    background-color: rgba(60, 60, 60, 0.551);
+    padding: 25px;
+    border-radius: 25px;
+    text-shadow: 0px 0px 5px #000000, 0px 0px 19px rgba(0, 0, 0, 0.38),
+        -9px 6px 19px rgba(0, 0, 0, 0.25);
+    font-size: calc(1vw + 1vh);
+}
+
+#menu-items div h2 {
+    color: var(--border-color);
+}
+
+#about div {
+    background-color: rgba(60, 60, 60, 0.551);
+    padding: 25px;
+    font-size: calc(1vw + 1vh);
+    border-radius: 25px;
+    max-width: 750px;
+    justify-self: center;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000000, 0px 0px 19px rgba(0, 0, 0, 0.38),
+        -9px 6px 19px rgba(0, 0, 0, 0.25);
+}
+
+#about div h2 {
+    color: var(--border-color);
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+/* links */
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#github {
+    background-image: url(img/github-mark-white.svg);
+}
+
+/* media queries */
+
+@media screen and (max-width: 450px) {
+    header {
+        gap: 0;
+        justify-content: space-around;
+    }
+    #menu-items {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1750px) {
+    #about div {
+        max-width: 1000px;
+    }
+}
